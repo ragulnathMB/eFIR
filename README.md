@@ -22,6 +22,8 @@ A simple and efficient FIR (First Information Report) Filing System designed for
   - Add update logs and change status of FIRs.
   - Assign cases to other officers.
   - Statistcs to monitor different types of FIR filed and their frequencies.
-  - Get notifications of updates
-  * Get Queries raised by the public.
+  - Get notifications of updates.
+  - Get Queries raised by the public.
+  - Add, edit and update announcements section in home page.
+- ## Police Officer
   
