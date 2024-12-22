@@ -16,4 +16,12 @@ A simple and efficient FIR (First Information Report) Filing System designed for
   - Download FIR details in pdf format.
   - Upload option to upload supporting files along with FIR.
   - Get notifications for every FIR updates.
-  - 
+  - Ask any Query in Contact Us section.
+- ## Jurisdiction Admin
+  - Get filed FIRs in the particular Juridiction Area.
+  - Add update logs and change status of FIRs.
+  - Assign cases to other officers.
+  - Statistcs to monitor different types of FIR filed and their frequencies.
+  - Get notifications of updates
+  * Get Queries raised by the public.
+  
