@@ -9,3 +9,11 @@ A simple and efficient FIR (First Information Report) Filing System designed for
 - Database : MongoDB
 - Notifications & OTP verification : nodemailer
 
+## Features and Roles
+- ### Public User:
+  - File an FIR.
+  - Check FIR status and case updates.
+  - Download FIR details in pdf format.
+  - Upload option to upload supporting files along with FIR.
+  - Get notifications for every FIR updates.
+  - 
