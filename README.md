@@ -33,7 +33,7 @@ A simple and efficient FIR (First Information Report) Filing System designed for
   - Get notifications of updates.
   - Get queries raised by the people.
 
-** Note: JurisdicationAdmin Role has been been implemented so that they can assign public user filed FIR to police Officers, they form a bridge between public user and officers . As there may be some FIRs that may be confidential. So JurisdictionAdmin officer can decide which FIRs should be assigned to which officer **
+**Note: JurisdicationAdmin Role has been been implemented so that they can assign public user filed FIR to police Officers, they form a bridge between public user and officers . As there may be some FIRs that may be confidential. So JurisdictionAdmin officer can decide which FIRs should be assigned to which officer**
 
 ## General Features
 - Special User Accessibiliy bar on top of website which includes:
