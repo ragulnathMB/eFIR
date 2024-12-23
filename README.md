@@ -65,12 +65,25 @@ A simple and efficient FIR (First Information Report) Filing System designed for
   ```bash
   npm i 
   ```
-  #### Setup Environmental Variables
-  ##### Create a .env file in the backend directory and add the following variables:
+  #### 3. Setup Environmental Variables
+  ##### Create a .env file in the backend directory and add the following variables according to your account:
   ```makefile
   MONGO_URI=mongodb+srv://<username>:<password>@cluster0.ctybb.mongodb.net/eFIR?retryWrites=true&w=majority&  appName=Cluster0
   DB_PASSWORD=<password>
   JWT_SECRET=<supersecuresecret>
   ```
+  ### 4. Run the Frontend server
+  ```bash
+  npm run dev
+  ```
+  ### 5. Run the Backend server
+  ```bash
+  cd src
+  node Server.js
+  ```
+  ## Conclusion
+  Thank You for Reading! I hope you like my project and if you want to make any changes or modify this project is open for contributions. 😊
+  ----
+  🚀 End of README
 
 
