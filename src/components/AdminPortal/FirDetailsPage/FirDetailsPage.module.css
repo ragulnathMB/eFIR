@@ -1,0 +1,185 @@
+/* FirDetailsPage.module.css */
+
+/* Global Styles */
+
+/* Dashboard Layout */
+.dashboard {
+    padding: 30px;
+    margin-bottom: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--section-bg-color);
+}
+
+/* Header Section */
+.header {
+    width: 100%;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.userInfo p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* FIR Details Section */
+.firDetailsSection {
+    width: 100%;
+    max-width: 900px;
+    padding: 25px;
+    background-color: #ffffff;
+    color: var(--section-text-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    margin-top: 30px;
+}
+
+.firDetailsSection p {
+    font-size: var(--text-size);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.firDetailsSection strong {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Buttons */
+button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    font-size: var(--text-size);
+    padding: 12px 25px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-color);
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background-color: var(--button-disabled-bg-color);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Actions Section */
+.actionsSection {
+    width: 100%;
+    max-width: 900px;
+    padding: 25px;
+    margin-top: 40px;
+    background-color: #ffffff;
+    color: var(--section-text-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.actionsSection h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--header-bg-color);
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: var(--text-size);
+    line-height: 1.5;
+    border: 1px solid var(--input-border-color);
+    border-radius: 8px;
+    resize: vertical;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+textarea:focus {
+    border-color: var(--focus-border-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.6);
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: var(--text-size);
+    margin-top: 15px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+select:focus {
+    border-color: var(--focus-border-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.6);
+}
+
+label {
+    font-size: var(--text-size);
+    margin-top: 15px;
+    font-weight: 500;
+    display: block;
+    color: var(--header-bg-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .firDetailsSection, .actionsSection {
+        padding: 15px;
+    }
+
+    .userInfo p {
+        font-size: 18px;
+    }
+
+    .firDetailsSection p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .firDetailsSection, .actionsSection {
+        padding: 10px;
+    }
+
+    .userInfo p {
+        font-size: 16px;
+    }
+
+    .firDetailsSection p {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}
+.logsSection{
+    width: 80%;
+}

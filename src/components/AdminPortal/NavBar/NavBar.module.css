@@ -1,0 +1,159 @@
+.main{
+    width: 100vw;
+    height: 70px;
+    background-color: white;
+    border-bottom: 2px solid rgb(61, 160, 236);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 4px 4px 10px gray;
+}
+
+.lImg{
+    width: 40px;
+}
+
+.profileImg{
+    width: 80px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 200px;
+    display: flex;
+    justify-content: center;
+    margin-right: 1vw;
+}
+
+.profileImg:hover{
+    cursor: pointer;
+    background: linear-gradient(to right,rgb(5, 132, 243),rgb(2, 71, 123));
+}
+
+.navContent{
+    color: black;
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    margin-left: 30vw;
+    justify-content: space-around;
+    font-weight: 500;
+}
+
+.navItem p {
+    position: relative;
+    display: inline-block;
+}
+
+.navItem p::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(2, 71, 123);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.navItem:hover p::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.navItem:hover{
+    cursor: pointer;
+}
+.pModal{
+    width: 200px;
+    height: 140px;
+    background-color: white;
+    color:black;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 4px 4px 10px gray;
+    z-index: 10;
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.modalItem{
+    background: linear-gradient(to right,rgb(5, 132, 243),rgb(2, 71, 123));
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+}
+.modalItem:hover{
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+.modalCont{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+.hideOnSmall {
+    display: flex;
+}
+
+.showOnSmall {
+    display: none;
+}
+
+@media (max-width: 665px) {
+    .hideOnSmall {
+        display: none;
+    }
+
+    .showOnSmall {
+        display: block;
+        cursor: pointer;
+        margin-right: 5vw;
+    }
+}
+
+
+.hamburgerModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modalNavItem {
+    margin: 20px 0;
+    font-size: 24px;
+    cursor: pointer;
+}

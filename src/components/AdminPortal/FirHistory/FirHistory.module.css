@@ -1,0 +1,138 @@
+/* General Styles */
+.historyContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Page Title */
+.pageTitle {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Loading Text */
+.loadingText,
+.noDataText {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* FIR List Container */
+.firList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* FIR Card Styles */
+.firCard,
+.firCardDark {
+  width: 300px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.firCardDark {
+  background-color: #333;
+  color: yellow;
+  border: 1px solid #555;
+}
+
+.firCard:hover,
+.firCardDark:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* FIR Detail Styles */
+.firDetail {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.firDetail h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.firDetail p {
+  margin: 10px 0;
+}
+
+/* Back Button */
+.backButton {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.backButton:hover {
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .firCard,
+  .firCardDark {
+    width: 100%;
+  }
+
+  .firList {
+    gap: 15px;
+  }
+
+  .pageTitle {
+    font-size: 1.5rem;
+  }
+
+  .loadingText,
+  .noDataText {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .firCard,
+  .firCardDark {
+    padding: 10px;
+  }
+
+  .pageTitle {
+    font-size: 1.2rem;
+  }
+
+  .backButton {
+    font-size: 0.9rem;
+  }
+
+  .firDetail {
+    padding: 15px;
+  }
+}

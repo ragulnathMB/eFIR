@@ -1,0 +1,134 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.formContainer {
+    background-color: white;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputGroup {
+    margin-bottom: 15px;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+.inputGroup input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.successMessage {
+    color: green;
+    margin-bottom: 15px;
+}
+
+.submitButton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.submitButton:hover:enabled {
+    background-color: #0056b3;
+}
+
+.forgotPasswordLink {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.forgotPasswordLink a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgotPasswordLink a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode Styles */
+body[data-theme='dark'] .main {
+    background-color: rgb(44, 43, 43);
+}
+
+body[data-theme='dark'] .formContainer {
+    background-color: black;
+}
+
+body[data-theme='dark'] .header h2 {
+    color: yellow;
+}
+
+body[data-theme='dark'] .inputGroup label,
+body[data-theme='dark'] .forgotPasswordLink a {
+    color: yellow;
+}
+
+body[data-theme='dark'] .inputGroup input {
+    background-color: rgb(44, 43, 43);
+    color: yellow;
+    border: 1px solid yellow;
+}
+
+body[data-theme='dark'] .submitButton {
+    background-color: yellow;
+    color: black;
+}
+
+body[data-theme='dark'] .submitButton:hover:enabled {
+    background-color: #e0c100;
+}
