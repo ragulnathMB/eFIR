@@ -7,7 +7,7 @@ A simple and efficient FIR (First Information Report) Filing System designed for
 - backend : Node.js, Express
 - Authentication : jwt(JSON Web Tokens), bcrypt
 - Database : MongoDB
-- Notifications & OTP verification : nodemailer *(Phone number otp verification feature not completed due to limited free tier platforms for it instead email otp verification has been done)*
+- Notifications & OTP verification : nodemailer *(Phone number otp verification feature has not been completed due to limited free tier platforms for it instead email otp verification has been done)*
 
 ## Features and Roles
 - ### Public User:
@@ -33,12 +33,18 @@ A simple and efficient FIR (First Information Report) Filing System designed for
   - Get notifications of updates.
   - Get queries raised by the people.
 
-**<u>Note:</u> JurisdicationAdmin Role has been been implemented so that they can assign public user filed FIR to police Officers, they form a bridge between public user and officers . As there may be some FIRs that may be confidential. So JurisdictionAdmin officer can decide which FIRs should be assigned to which officer**
+**Note: JurisdicationAdmin Role has been been implemented so that they can assign public user filed FIR to police Officers, they form a bridge between public user and officers . As there may be some FIRs that may be confidential. So JurisdictionAdmin officer can decide which FIRs should be assigned to which officer. Dividing responsibilities between roles ensures that each user has the right amount of access to perform their tasks efficiently without unnecessary distractions**
 
 ## General Features
 - Special User Accessibiliy bar on top of website which includes:
   - Select Language option : User can translate website to variety of indian languages.
   - Options to increase or decrease Font Size.
   - Option to change Contrasts
-  - 
+- Security and Authentication:
+  - Raw user informations are converted to tokens using JWT and are stored in HTTP-Cookie making a safe and user information is not exposed.
+  -  At each and every step user verification is done using tokens,
+  - Sensitive user data such as password are hashed and stored in database using bcrypt.
+
+ 
+  
   
