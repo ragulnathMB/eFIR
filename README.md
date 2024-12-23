@@ -1,8 +1,8 @@
-# eFIR - Online First Information Report Filing System
+# eFIR - Online First Information Report Filing System 
 
 A simple and efficient FIR (First Information Report) Filing System designed for managing and storing FIRs in a digital format. This system allows police stations or public users to register, view, and manage FIRs, making the process faster and more organized.
 
-## Tech Stack
+## Tech Stack 🧑‍💻
 - Frontend : ReactJS(HTML, CSS, JavaScript)
 - backend : Node.js, Express
 - Authentication : jwt(JSON Web Tokens), bcrypt
@@ -10,7 +10,7 @@ A simple and efficient FIR (First Information Report) Filing System designed for
 - Notifications & OTP verification : nodemailer *(Phone number otp verification feature has not been completed due to limited free tier platforms for it instead email otp verification has been done)*
 
 ## Features and Roles
-- ### Public User:
+- ### Public User: 
   - File an FIR.
   - Check FIR status and case updates.
   - Download FIR details in pdf format.
@@ -54,7 +54,7 @@ A simple and efficient FIR (First Information Report) Filing System designed for
     - [Git](https://git-scm.com/)
     - [npm](https://www.npmjs.com/) for managing dependencies
   
-  ### Step by Step Installation
+  ### Step by Step Installation 🚀
 
   #### 1. Clone the repository
   ```bash
@@ -82,7 +82,7 @@ A simple and efficient FIR (First Information Report) Filing System designed for
   node Server.js
   ```
   ## Conclusion
-  Thank You for Reading! I hope you like my project and if you want to make any changes or modify this project is open for contributions. 😊
+  ###### Thank You for Reading! I hope you like my project and if you want to make any changes or modify this project is open for contributions. 😊
   ----
   🚀 End of README
 
