@@ -10,14 +10,14 @@ A simple and efficient FIR (First Information Report) Filing System designed for
 - Notifications & OTP verification : nodemailer *(Phone number otp verification feature has not been completed due to limited free tier platforms for it instead email otp verification has been done)*
 
 ## Features and Roles
-- ### Public User: 
+- ### Public User:  
   - File an FIR.
   - Check FIR status and case updates.
   - Download FIR details in pdf format.
   - Upload option to upload supporting files along with FIR.
   - Get notifications for every FIR updates.
   - Ask any Query in Contact Us section.
-- ## Jurisdiction Admin
+- ## Jurisdiction Admin: 👮
   - Get filed FIRs in the particular Juridiction Area.
   - Add update logs and change status of FIRs.
   - Assign FIR cases to other officers.
@@ -25,7 +25,7 @@ A simple and efficient FIR (First Information Report) Filing System designed for
   - Get notifications of updates.
   - Get Queries raised by the public.
   - Add, edit and update announcements section in home page.
-- ## Police Officer
+- ## Police Officer: 👮
   - Get the assigned FIRs.
   - Add update logs and change status of FIRs.
   - Assign assigned FIR cases to other officers.
@@ -60,10 +60,14 @@ A simple and efficient FIR (First Information Report) Filing System designed for
   ```bash
   git clone https://github.com/yourusername/fir-filing-system.git
   cd eFIR
+  npm install
   ```
   #### 2. Install Frontend and Backend dependencies
   ```bash
-  npm i 
+  npm install express body-parser axios bcrypt chart.js cookie-parser cors date-fns dotenv formidable gridfs-stream jsonwebtoken jspdf jspdf-autotable jwt-decode mongodb mongoose multer nodemailer react react-chartjs-2 react-dom react-router-dom
+
+  npm install --save-dev @eslint/js @types/react @types/react-dom @vitejs/plugin-react eslint eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh globals vite
+
   ```
   #### 3. Setup Environmental Variables
   ##### Create a .env file in the backend directory and add the following variables according to your account:
@@ -82,7 +86,7 @@ A simple and efficient FIR (First Information Report) Filing System designed for
   node Server.js
   ```
   ## Conclusion
-  ###### Thank You for Reading! I hope you like my project and if you want to make any changes or modify this project is open for contributions. 😊
+  ###### Thank You for Reading! I hope you like my project and if you want to make any changes or modify ,this project is open for contributions. 😊
   ----
   🚀 End of README
 
