@@ -47,6 +47,30 @@ A simple and efficient FIR (First Information Report) Filing System designed for
 
 ## Installation Guide
 - ### Prerequisites
- - Before you begin, ensure you have the following installed on your machine:
-  - [Node.js](https://nodejs.org/) (version 14 or later)
-  - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) 
+  - Before you begin, ensure you have the following installed on your machine:
+    - [Node.js](https://nodejs.org/) (version 14 or later)
+    - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) account for database.
+      - After creating MongoDB Atlas account make sure in mongoDB Atlas you allow access to all IP address networks and make a 'eFIR' named Database.
+    - [Git](https://git-scm.com/)
+    - [npm](https://www.npmjs.com/) for managing dependencies
+  
+  ### Step by Step Installation
+
+  #### 1. Clone the repository
+  ```bash
+  git clone https://github.com/yourusername/fir-filing-system.git
+  cd eFIR
+  ```
+  #### 2. Install Frontend and Backend dependencies
+  ```bash
+  npm i 
+  ```
+  #### Setup Environmental Variables
+  ##### Create a .env file in the backend directory and add the following variables:
+  ```makefile
+  MONGO_URI=mongodb+srv://<username>:<password>@cluster0.ctybb.mongodb.net/eFIR?retryWrites=true&w=majority&  appName=Cluster0
+  DB_PASSWORD=<password>
+  JWT_SECRET=<supersecuresecret>
+  ```
+
+
