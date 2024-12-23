@@ -45,3 +45,8 @@ A simple and efficient FIR (First Information Report) Filing System designed for
   -  At each and every step user verification is done using tokens,
   - Sensitive user data such as password are hashed and stored in database using bcrypt.
 
+## Installation Guide
+- ### Prerequisites
+ - Before you begin, ensure you have the following installed on your machine:
+  - [Node.js](https://nodejs.org/) (version 14 or later)
+  - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) 
