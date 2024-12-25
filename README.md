@@ -2,7 +2,6 @@
 
 A simple and efficient FIR (First Information Report) Filing System designed for managing and storing FIRs in a digital format. This system allows police stations or public users to register, view, and manage FIRs, making the process faster and more organized.
 [Video Demonstration](https://youtu.be/lNCQHijM3G8)
-[![Video Demonstration](https://img.youtube.com/vi/lNCQHijM3G8/0.jpg)](https://www.youtube.com/watch?v=lNCQHijM3G8)
 
 ## Tech Stack 🧑‍💻
 - Frontend : ReactJS(HTML, CSS, JavaScript)
