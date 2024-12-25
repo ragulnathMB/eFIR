@@ -42,7 +42,7 @@ A simple and efficient FIR (First Information Report) Filing System designed for
   - Options to increase or decrease Font Size.
   - Option to change Contrasts
 - Security and Authentication:
-  - Raw user informations are converted to tokens using JWT and are stored in HTTP-Cookie making a safe and user information is not exposed.
+  - Raw user informations are converted to tokens using JWT and are stored in HTTP-Cookie making it safe and user information is not exposed.
   -  At each and every step user verification is done using tokens,
   - Sensitive user data such as password are hashed and stored in database using bcrypt.
 
