@@ -1,13 +1,14 @@
 # eFIR - Online First Information Report Filing System 
 
 A simple and efficient FIR (First Information Report) Filing System designed for managing and storing FIRs in a digital format. This system allows police stations or public users to register, view, and manage FIRs, making the process faster and more organized.
+[Video Demonstration](https://youtu.be/lNCQHijM3G8)
 
 ## Tech Stack 🧑‍💻
 - Frontend : ReactJS(HTML, CSS, JavaScript)
 - backend : Node.js, Express
 - Authentication : jwt(JSON Web Tokens), bcrypt
 - Database : MongoDB
-- Notifications & OTP verification : nodemailer *(Phone number otp verification feature has not been completed due to limited free tier platforms for it instead email otp verification has been done)*
+- Notifications & OTP verification : twilio
 
 ## Features and Roles
 - ### Public User:  
