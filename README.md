@@ -67,13 +67,13 @@ A simple and efficient FIR (First Information Report) Filing System designed for
   ```
   #### 2. Install Frontend and Backend dependencies
   ```bash
-  npm install express body-parser axios bcrypt chart.js cookie-parser cors date-fns dotenv formidable gridfs-stream jsonwebtoken jspdf jspdf-autotable jwt-decode mongodb mongoose multer nodemailer react react-chartjs-2 react-dom react-router-dom
+  npm install express body-parser axios bcrypt chart.js cookie-parser cors date-fns dotenv formidable gridfs-stream jsonwebtoken jspdf jspdf-autotable jwt-decode mongodb mongoose multer nodemailer react react-chartjs-2 react-dom react-router-dom twilio
 
   npm install --save-dev @eslint/js @types/react @types/react-dom @vitejs/plugin-react eslint eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh globals vite
 
   ```
   #### 3. Setup Environmental Variables
-  ##### Create a .env file in the backend directory and add the following variables according to your account:
+  ##### Navigate to .env file in the src directory and add the following variables according to your account:
   ```makefile
   MONGO_URI=mongodb+srv://<username>:<password>@cluster0.ctybb.mongodb.net/eFIR?retryWrites=true&w=majority&  appName=Cluster0
   DB_PASSWORD=<password>
