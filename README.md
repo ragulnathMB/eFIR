@@ -61,7 +61,7 @@ A simple and efficient FIR (First Information Report) Filing System designed for
 
   #### 1. Clone the repository
   ```bash
-  git clone https://github.com/yourusername/fir-filing-system.git
+  git clone https://github.com/ragulnathMB/eFIR.git
   cd eFIR
   npm install
   ```
@@ -78,6 +78,9 @@ A simple and efficient FIR (First Information Report) Filing System designed for
   MONGO_URI=mongodb+srv://<username>:<password>@cluster0.ctybb.mongodb.net/eFIR?retryWrites=true&w=majority&  appName=Cluster0
   DB_PASSWORD=<password>
   JWT_SECRET=<supersecuresecret>
+  accountSid = twilioAccountSID
+  authToken = twilioAccountToken
+  serviceSid = twilioServiceID
   ```
   ### 4. Run the Frontend server
   ```bash
