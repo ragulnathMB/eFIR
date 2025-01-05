@@ -9,6 +9,7 @@ import multer from 'multer';
 import { MongoClient, GridFSBucket,ObjectId } from 'mongodb';
 import { Readable } from 'stream';
 import cookieParser from 'cookie-parser';
+import twilio from 'twilio';
 import nodemailer from 'nodemailer';
 import axios from 'axios';
 import path from 'path';
@@ -18,6 +19,11 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const accountSid = process.env.accountSid;
+const authToken = process.env.authToken;
+const serviceSid = process.env.serviceSid; // Twilio Verify service SID
+const client2 = twilio(accountSid, authToken);
+
 
 // Middleware
 app.use(bodyParser.json());
@@ -828,63 +834,42 @@ app.get('/firCounts', async (req, res) => {
       res.status(500).json({ error: "Internal server error" });
     }
   });
+  app.post('/send-otp', async (req, res) => {
+    const { phoneNumber } = req.body;
+    console.log(phoneNumber);
+
+    try {
+        const verification = await client2.verify.v2.services(serviceSid)
+            .verifications
+            .create({ to: `+91${phoneNumber}`, channel: 'sms' });
+
+        res.status(200).json({ message: 'OTP sent successfully!' });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// Endpoint to verify OTP
+app.post('/verify-otp', async (req, res) => {
+    const { phoneNumber, enteredOtp } = req.body;
+    console.log(phoneNumber,enteredOtp);
+
+    try {
+        const verificationCheck = await client2.verify.v2.services(serviceSid)
+            .verificationChecks
+            .create({ to: `+91${phoneNumber}`, code: enteredOtp });
+
+        if (verificationCheck.status === 'approved') {
+            res.status(200).json({ message: 'OTP verified successfully!' });
+        } else {
+            res.status(400).json({ error: 'Invalid OTP' });
+        }
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
   
 
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'ragulnath255@gmail.com', // Your Gmail address
-      pass: 'ofqo smkr akki lxzw',    // Gmail App Password (or regular password if no 2FA)
-    },
-  });
-  
-  // Send SMS function
-  function sendSMS(phoneNumber, message) {
-    // Check if phone number is valid
-    if (!phoneNumber || !message) {
-      console.error("Phone number or message is missing");
-      return;
-    }
-  
-    const carrierEmail = `${phoneNumber}@airtelmail.com`; // Replace with correct carrier domain
-  
-    // Log to check if carrierEmail is being generated correctly
-    console.log("Carrier Email:", carrierEmail);
-  
-    const mailOptions = {
-      from: 'ragulnath255@gmail.com',  // Your email address
-      to: carrierEmail,               // Recipient's phone number as email (carrier email format)
-      subject: '',                    // No subject needed for SMS
-      text: message,                  // The SMS content
-    };
-  
-    // Log mailOptions to ensure everything is set correctly
-    console.log("Mail Options:", mailOptions);
-  
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.log('Error sending message:', error);
-      } else {
-        console.log('Message sent:', info.response);
-      }
-    });
-  }
-  
-  app.post('/send-sms', async (req, res) => {
-    const { phoneNumber, message } = req.body;
-  
-    try {
-      if (!phoneNumber || !message) {
-        return res.status(400).json({ success: false, error: 'Phone number and message are required' });
-      }
-  
-      sendSMS(phoneNumber, message);
-      
-      res.status(200).json({ success: true, message: 'SMS sent successfully' });
-    } catch (error) {
-      res.status(500).json({ success: false, error: 'Failed to send SMS' });
-    }
-  });
 
   
   const authenticate = (req, res, next) => {
